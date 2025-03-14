@@ -1,5 +1,5 @@
 import { Tabs } from 'expo-router';
-import { Chrome as Home, Search, SquarePlus as PlusSquare, Heart, User } from 'lucide-react-native';
+import { Chrome as Home, Search, SquarePlus as PlusSquare, Heart, User, Bell } from 'lucide-react-native';
 
 export default function TabLayout() {
   return (
@@ -29,13 +29,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="search"
-        options={{
-          title: 'Explore',
-          tabBarIcon: ({ color, size }) => <Search size={size} color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="sell"
         options={{
           title: 'Sell',
@@ -43,10 +36,10 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="favorites"
+        name="notifications"
         options={{
-          title: 'Favorites',
-          tabBarIcon: ({ color, size }) => <Heart size={size} color={color} />,
+          title: 'Notifications',
+          tabBarIcon: ({ color, size }) => <Bell size={size} color={color} />,
         }}
       />
       <Tabs.Screen
